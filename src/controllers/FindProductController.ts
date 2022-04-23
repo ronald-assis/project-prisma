@@ -10,7 +10,11 @@ export class FindProductController {
         id: Number(id),
       },
       include: {
-        ProductCategory: true,
+        ProductCategory: {
+          include: {
+            category: true,
+          }
+        },
       },
     });
 
