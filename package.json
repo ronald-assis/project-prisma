@@ -1,0 +1,27 @@
+{
+  "name": "first_project_prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "curs": "^1.0.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "prisma": "^3.13.0-dev.29",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
