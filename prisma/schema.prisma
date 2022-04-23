@@ -6,3 +6,21 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Product {
+  id         Int      @id @default(autoincrement()) // @id: Informs that it is primary key
+  name       String
+  bar_code   String   @unique // @unique: Informs that it is uniqquqe
+  price      Decimal // Decimal Informs that it is Number
+  created_At DateTime @default(now())
+  updated_At DateTime @default(now())
+
+  @@map("products")
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  @@map("categories")
+}
