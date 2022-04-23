@@ -1,19 +1,19 @@
 import { Request, Response } from "express";
 import { prismaClient } from "../database/prismaClient";
 
-export class FindProductController {
+export class FindCategoryController {
   async handle(req: Request, res: Response) {
     const { id } = req.params;
 
-    const product = await prismaClient.product.findFirst({
+    const category = await prismaClient.category.findFirst({
       where: {
         id: Number(id),
       },
       include: {
-        ProductCategory: true,
-      },
+        ProductCategory: true
+      }
     });
 
-    return res.status(200).json(product);
+    return res.status(200).json(category);
   };
 };
